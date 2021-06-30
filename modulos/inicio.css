@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.cont{
+    /*Si quiero poner de color el margen de la separación de los cuadros
+    background:rgb(160, 28, 28);
+    */
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+    display:grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5,1fr);
+}
+.cont{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, auto);
+
+    grid-template-areas: "t1       t1"
+                         "con1     con1"
+                         "t2       t2"
+                         "con2     con2"
+                         "t3        t3"
+                         "con3     con3"
+                         "t4        t4"
+                         "con4     con4"
+                         "t5        t5"
+                         "con5     con5";
+                        
+}
+.cont .con5,
+.cont .t5,
+.cont .con4,
+.cont .t4,
+.cont .con3,
+.cont .t3,
+.cont .con2,
+.cont .t2,
+.cont .con1,
+.cont .t1{
+    background:whitesmoke;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex; /*para acomodar el contenido*/
+    align-items: center;
+    justify-content: center;
+}
+.cont .t1{
+    grid-area: t1;
+}
+.cont .con1{
+    grid-area: con1;
+}
+.cont .t2{
+    grid-area: t2;
+}
+.cont .con2{
+    grid-area: con2;
+}
+.cont .t3{
+    grid-area: t3;
+}
+.cont .con3{
+    grid-area: con3;
+}
+.cont .t4{
+    grid-area: t4;
+}
+.cont .con4{
+    grid-area: con4;
+}
+.cont .t5{
+    grid-area: t5;
+}
+.cont .con5{
+    grid-area: con5;
+}

@@ -1,0 +1,1 @@
+<h2>Tipos de Catalagos</h2>

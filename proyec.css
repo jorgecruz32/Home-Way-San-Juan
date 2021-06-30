@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+
+    background: radial-gradient(1.5em 6.28571em at 1.95em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(1.5em 6.28571em at -0.45em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 1.5em 5.5em, radial-gradient(2.3em 4.57143em at 2.99em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(2.3em 4.57143em at -0.69em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.3) 55%, rgba(255, 255, 255, 0) 55%) 2.3em 4em, radial-gradient(3.5em 6.28571em at 4.55em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 0 0, radial-gradient(3.5em 6.28571em at -1.05em, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 55%, rgba(255, 255, 255, 0) 55%) 3.5em 5.5em, radial-gradient(#0f0f0f, #7d9092c5);
+    background-color: rgb(17, 19, 18);
+    background-size: 1.5em 11em, 1.5em 11em, 2.3em 8em, 2.3em 8em, 3.5em 11em, 3.5em 11em, 100% 100%;
+    background-repeat: repeat;
+    
+
+}
+.contenedor{
+    /*Si quiero poner de color el margen de la separación de los cuadros
+    background:rgb(160, 28, 28);
+    */
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+    display:grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5,1fr);
+}
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(16, auto);
+
+    grid-template-areas: "header       header        header        header        header       header  "
+                         "n1           article1      article1      article1      article1      article1"
+                         "nav          navegadores   navegadores   navegadores   navegadores   aside1"
+                         "contenido    contenido     contenido     contenido     contenido     contenido"
+                         "article2     article2      article2      article2      article2      article2"
+                         "BB           CHAVOS        HOGAR         COBERTORES    PRIMAVERA     CAMA"
+                         "footer       footer        footer        footer        footer         footer";
+}
+.contenedor .n1,
+.contenedor .nav,
+.contenedor .BB,
+.contenedor .CHAVOS,
+.contenedor .HOGAR,
+.contenedor .COBERTORES,
+.contenedor .PRIMAVERA,
+.contenedor .CAMA,
+.contenedor .article1,
+.contenedor .article2,
+.contenedor .aside1,
+.contenedor .navegadores,
+.contenedor .contenido,
+.contenedor .header,
+.contenedor .footer{
+    background:whitesmoke;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex; /*para acomodar el contenido*/
+    align-items: center;
+    justify-content: center;
+}
+.contenedor .header{
+    background: teal;
+    grid-area: header;
+}
+.contenedor .navegadores{
+    grid-area: navegadores;
+    background: lightslategray;
+}
+.contenedor .n1{
+    grid-area: n1;
+}
+
+.n1 img {
+    width: 90px;
+    height: 90px;
+}
+.contenedor .nav{
+    grid-area: nav;
+    background: 	#E8E8E8 ;
+}
+.contenedor > .aside1{
+    grid-area: aside1;
+    background: 	#E8E8E8 ;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor .aside1 img{
+    width: 100%;
+    margin-top: 5px;
+}
+.contenedor .article1{
+    grid-area: article1;
+    background: 	#E8E8E8 ;
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+    background: teal;
+}
+.contenedor .article2{
+    grid-area: article2;
+    background: teal;
+}
+.contenedor .BB{
+    grid-area: BB;
+    background: lightslategray;
+}
+.contenedor .CHAVOS{
+    grid-area: CHAVOS;
+    background: lightslategray;
+}
+.contenedor .HOGAR{
+    grid-area: HOGAR;
+    background: lightslategray;
+}
+.contenedor .COBERTORES{
+    grid-area: COBERTORES;
+    background: lightslategray;
+}
+.contenedor .PRIMAVERA{
+    grid-area: PRIMAVERA;
+    background: lightslategray;
+}
+.contenedor .CAMA{
+    grid-area: CAMA;
+    background: lightslategray;
+}
+.contenedor .footer{
+    grid-area: footer;
+    background: rgb(87, 14, 14);
+}
+
+
+.contenedor .PRIMAVERA,
+.contenedor .CAMA,
+.contenedor .HOGAR,
+.contenedor .COBERTORES
+.contenedor .CHAVOS,
+.contenedor .BB{
+    background:  lightslategray;
+    color: black;
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+.contenedor > div{
+    color: rgb(8, 8, 8);
+}
+.contenedor > div:hover{
+    cursor: pointer;
+    color: rgb(75, 114, 189);
+    background: white;
+  
+    
+}
+@media screen and (max-width: 768px) {
+    .contenedor{
+        grid-template-areas: "header       header        header "
+        "n1           article1      article1 "
+        "nav          navegadores     aside1"
+        "contenido    contenido     contenido"
+        "article2     article2      article2"
+        "BB           CHAVOS        HOGAR "
+        "COBERTORES    PRIMAVERA     CAMA"
+        "footer       footer        footer";
+                            
+
+
+    }
+}
